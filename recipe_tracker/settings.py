@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#o1nw(m8@4c5$7j2)1o@a+$(=m&!-98grjc#k&twlba_*k(u&j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-jaiy1iz2139.ws-eu98.gitpod.io']
+ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-jaiy1iz2139.ws-eu99.gitpod.io']
 
 
 # Application definition
@@ -56,7 +56,9 @@ ROOT_URLCONF = 'recipe_tracker.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
