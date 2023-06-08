@@ -11,7 +11,8 @@
 <div>
     {% for recipe in recipes %}
         <div>
-            <h5>{{recipe.id}} -- <a href="/recipe/{{recipe.id}}">{{recipe.dish}}</a></h5>
+            <span><p>{{recipe.cuisine}}</p></span>
+            <h2>{{recipe.id}} -- <a href="/recipe/{{recipe.id}}">{{recipe.dish}}</a></h2>
         </div>
 
     {% endfor %}
