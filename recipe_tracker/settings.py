@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-jaiy1iz2139.ws-eu98.gitpod.io']
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-lukasrid-recipetracker-jaiy1iz2139.ws-eu98.gitpod.io','https://*.127.0.0.1']
+
 
 # Application definition
 

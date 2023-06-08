@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Recipe
 
 recipes = [
     {'id': 1, 'name': 'Savoury'},
@@ -7,6 +8,7 @@ recipes = [
 
 
 def home(request):
+    recipes = Recipe.objects.all()
     context = {'recipes': recipes}
     return render(request, 'base/home.html', {'recipes': recipes})
 
