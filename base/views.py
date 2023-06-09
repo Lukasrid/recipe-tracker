@@ -44,3 +44,10 @@ def updateRecipe(request, pk):
 
     context = {'form': form}
     return render(request, 'base/recipe_form.html', context)
+
+def deleteRecipe(request, pk):
+    recipe = Recipe.objects.get(id=pk)
+    if request.method == 'POST':
+        recipe.delete()
+        return redirect('home')
+    return render(request, 'base/delete.html', {'obj':recipe})

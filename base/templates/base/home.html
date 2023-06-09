@@ -14,6 +14,7 @@
         {% for recipe in recipes %}
             <div>
                 <a href="{% url 'update-recipe' recipe.id %}">Edit</a>
+                <a href="{% url 'delete-recipe' recipe.id %}">Delete</a>
                 <span><p>{{recipe.cuisine}}</p></span>
                 <h2>{{recipe.id}} -- <a href="/recipe/{{recipe.id}}">{{recipe.dish}}</a></h2>
                 <p>{{recipe.description}}</p>
