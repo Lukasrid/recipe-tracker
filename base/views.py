@@ -23,7 +23,10 @@ def recipe(request, pk):
 def createRecipe(request):
     form = RecipeForm()
     if request.method == 'POST':
-        print(request.POST)
+        form = RecipeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
 
     context = {'form': form}
     return render(request, 'base/recipe_form.html', context)
