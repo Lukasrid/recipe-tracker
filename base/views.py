@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Recipe
+from .forms import RecipeForm
 
 # recipes = [
 #     {'id': 1, 'name': 'Savoury'},
@@ -17,3 +18,12 @@ def recipe(request, pk):
     recipe = Recipe.objects.get(id=pk)
     context = {'recipe': recipe}
     return render(request, 'base/recipe.html', context)
+
+
+def createRecipe(request):
+    form = RecipeForm()
+    if request.method == 'POST':
+        print(request.POST)
+
+    context = {'form': form}
+    return render(request, 'base/recipe_form.html', context)

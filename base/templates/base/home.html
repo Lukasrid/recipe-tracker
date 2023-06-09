@@ -8,15 +8,18 @@
 
 <div>
 
-<div>
-    {% for recipe in recipes %}
-        <div>
-            <span><p>{{recipe.cuisine}}</p></span>
-            <h2>{{recipe.id}} -- <a href="/recipe/{{recipe.id}}">{{recipe.dish}}</a></h2>
-        </div>
+    <a href="{% url 'create-recipe' %}">Create Recipe</a>
 
-    {% endfor %}
-</div>
+    <div>
+        {% for recipe in recipes %}
+            <div>
+                <span><p>{{recipe.cuisine}}</p></span>
+                <h2>{{recipe.id}} -- <a href="/recipe/{{recipe.id}}">{{recipe.dish}}</a></h2>
+                <p>{{recipe.description}}</p>
+            </div>
+
+        {% endfor %}
+    </div>
 
 </div>
 
