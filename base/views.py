@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Recipe
+from .models import Recipe, Cuisine
 from .forms import RecipeForm
 
 # recipes = [
@@ -10,7 +10,10 @@ from .forms import RecipeForm
 
 def home(request):
     recipes = Recipe.objects.all()
-    context = {'recipes': recipes}
+
+    cuisines = Cuisine.objects.all()
+
+    context = {'recipes': recipes, 'cuisines': cuisines}
     return render(request, 'base/home.html', {'recipes': recipes})
 
 

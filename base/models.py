@@ -4,10 +4,16 @@ from django.db.models.deletion import CASCADE
 
 
 
+class Cuisine(models.Model):
+    name = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
 
 class Recipe(models.Model):
     dish = models.CharField(max_length=200)
-    cuisine = models.CharField(max_length=200)
+    cuisine = models.ForeignKey(Cuisine, null=True, on_delete=models.SET_NULL)
     description = models.TextField(null=True, blank=True)
     ingredients = models.TextField()
     method = models.TextField()
