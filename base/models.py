@@ -3,12 +3,11 @@ from django.contrib.auth.models import User
 from django.db.models.deletion import CASCADE
 
 
-
 class Cuisine(models.Model):
-    name = models.CharField(max_length=200)
+    type = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.name
+        return self.type
 
 
 class Recipe(models.Model):

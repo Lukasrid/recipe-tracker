@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-#o1nw(m8@4c5$7j2)1o@a+$(=m&!-98grjc#k&twlba_*k(u&j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-jaiy1iz2139.ws-eu99.gitpod.io']
+ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-cesh2c8es07.ws-eu99.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-lukasrid-recipetracker-jaiy1iz2139.ws-eu99.gitpod.io','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://8000-lukasrid-recipetracker-cesh2c8es07.ws-eu99.gitpod.io','https://*.127.0.0.1']
 
 
 # Application definition

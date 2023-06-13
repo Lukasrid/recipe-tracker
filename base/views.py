@@ -14,7 +14,7 @@ def home(request):
     cuisines = Cuisine.objects.all()
 
     context = {'recipes': recipes, 'cuisines': cuisines}
-    return render(request, 'base/home.html', {'recipes': recipes})
+    return render(request, 'base/home.html', {'recipes': recipes, 'cuisines': cuisines})
 
 
 def recipe(request, pk):
@@ -47,6 +47,7 @@ def updateRecipe(request, pk):
 
     context = {'form': form}
     return render(request, 'base/recipe_form.html', context)
+
 
 def deleteRecipe(request, pk):
     recipe = Recipe.objects.get(id=pk)

@@ -19,7 +19,7 @@
 
         {% for cuisine in cuisines %}
             <div>
-                <a href="{% url 'home' %}?q={{cuisine.name}}">{{cuisine.name}}</a>
+                <a href="{% url 'home' %}?q={{cuisine.name}}">{{cuisine.type}}</a>
             </div>
         {% endfor %}
     </div>
