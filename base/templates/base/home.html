@@ -17,14 +17,19 @@
         <h3>Browse Cuisines</h3>
         <hr>
 
+        <div>
+            <a href="{% url 'home' %}">All</a>
+        </div>
+
         {% for cuisine in cuisines %}
             <div>
-                <a href="{% url 'home' %}?q={{cuisine.name}}">{{cuisine.type}}</a>
+                <a href="{% url 'home' %}?q={{cuisine.type}}">{{cuisine.type}}</a>
             </div>
         {% endfor %}
     </div>
 
     <div>
+        <h5>{{recipes_count}} recipes available</h5>
         <a href="{% url 'create-recipe' %}">Create Recipe</a>
 
         <div>

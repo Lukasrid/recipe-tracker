@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.db.models import Q
+from django.contrib.auth.models import User
 from .models import Recipe, Cuisine
 from .forms import RecipeForm
 
@@ -8,13 +11,36 @@ from .forms import RecipeForm
 # ]
 
 
+def loginPage(request):
+
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        try:
+            user = User.objects.get(username=username)
+        except:
+            messages.error(request, 'User does not exist')
+
+
+    context = {}
+    return render(request, 'base/login_register.html', context)
+
+
 def home(request):
-    recipes = Recipe.objects.all()
+    q = request.GET.get('q') if request.GET.get('q') != None else ''
+    recipes = Recipe.objects.filter(
+        Q(cuisine__type__icontains=q) | 
+        Q(dish__icontains=q) | 
+        Q(description__icontains=q) |
+        Q(ingredients__icontains=q)
+        )
 
     cuisines = Cuisine.objects.all()
+    recipes_count = recipes.count()
 
-    context = {'recipes': recipes, 'cuisines': cuisines}
-    return render(request, 'base/home.html', {'recipes': recipes, 'cuisines': cuisines})
+    context = {'recipes': recipes, 'cuisines': cuisines, 'recipes_count': recipes_count}
+    return render(request, 'base/home.html', context)
 
 
 def recipe(request, pk):
