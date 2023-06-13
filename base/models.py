@@ -11,6 +11,7 @@ class Cuisine(models.Model):
 
 
 class Recipe(models.Model):
+    user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
     dish = models.CharField(max_length=200)
     cuisine = models.ForeignKey(Cuisine, null=True, on_delete=models.SET_NULL)
     description = models.TextField(null=True, blank=True)

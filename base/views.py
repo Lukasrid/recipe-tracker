@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -62,6 +64,7 @@ def recipe(request, pk):
     return render(request, 'base/recipe.html', context)
 
 
+@login_required(login_url='login')
 def createRecipe(request):
     form = RecipeForm()
     if request.method == 'POST':
@@ -74,9 +77,13 @@ def createRecipe(request):
     return render(request, 'base/recipe_form.html', context)
 
 
+@login_required(login_url='login')
 def updateRecipe(request, pk):
     recipe = Recipe.objects.get(id=pk)
     form = RecipeForm(instance=recipe)
+
+    if request.user != recipe.user:
+        return HttpResponse('This is not your recipe to edit!!')
 
     if request.method == 'POST':
         form = RecipeForm(request.POST, instance=recipe)
@@ -88,8 +95,13 @@ def updateRecipe(request, pk):
     return render(request, 'base/recipe_form.html', context)
 
 
+@login_required(login_url='login')
 def deleteRecipe(request, pk):
     recipe = Recipe.objects.get(id=pk)
+
+    if request.user != recipe.user:
+        return HttpResponse('This is not your recipe to delete!!')
+
     if request.method == 'POST':
         recipe.delete()
         return redirect('home')
