@@ -13,11 +13,21 @@
 
     {% for comment in recipe_comments %}
         <div>
-            <small>- {{comment.user}} @ {{comment.created|timesince}} ago</small>
             <p>{{comment.body}}</p>
+            <small>- {{comment.user}}  {{comment.created|timesince}} ago</small>
             <hr>
         </div>
     {% endfor %}
+
+    {% if request.user.is_authenticated %}
+    <div class="comment-form">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <textarea rows="5" cols="50" name="body" placeholder="Write your comment here..."></textarea>
+        </form>
+    </div>
+    {% endif %}
+    
 </div>
 
 {% endblock content %}
