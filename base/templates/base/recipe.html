@@ -24,6 +24,7 @@
         <form method="POST" action="">
             {% csrf_token %}
             <textarea rows="5" cols="50" name="body" placeholder="Write your comment here..."></textarea>
+            <input type="submit" placeholder="Post Comment">
         </form>
     </div>
     {% endif %}

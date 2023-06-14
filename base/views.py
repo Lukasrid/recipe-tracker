@@ -6,7 +6,7 @@ from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
-from .models import Recipe, Cuisine
+from .models import Recipe, Cuisine, Comment
 from .forms import RecipeForm
 
 # recipes = [
@@ -82,6 +82,15 @@ def home(request):
 def recipe(request, pk):
     recipe = Recipe.objects.get(id=pk)
     recipe_comments = recipe.comment_set.all().order_by('-created')
+
+    if request.method == 'POST':
+        comment = Comment.objects.create(
+            user=request.user,
+            recipe=recipe,
+            body=request.POST.get('body')
+        )
+        return redirect('recipe', pk=recipe.id)
+
     context = {'recipe': recipe, 'recipe_comments': recipe_comments}
     return render(request, 'base/recipe.html', context)
 
