@@ -137,3 +137,16 @@ def deleteRecipe(request, pk):
         recipe.delete()
         return redirect('home')
     return render(request, 'base/delete.html', {'obj':recipe})
+
+
+@login_required(login_url='login')
+def deleteComment(request, pk):
+    comment = Comment.objects.get(id=pk)
+
+    if request.user != comment.user:
+        return HttpResponse('This is not your comment to delete!!')
+
+    if request.method == 'POST':
+        comment.delete()
+        return redirect('home')
+    return render(request, 'base/delete.html', {'obj':comment})
