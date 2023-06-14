@@ -81,7 +81,8 @@ def home(request):
 
 def recipe(request, pk):
     recipe = Recipe.objects.get(id=pk)
-    context = {'recipe': recipe}
+    recipe_comments = recipe.comment_set.all().order_by('-created')
+    context = {'recipe': recipe, 'recipe_comments': recipe_comments}
     return render(request, 'base/recipe.html', context)
 
 
