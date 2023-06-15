@@ -4,7 +4,7 @@
 {% block content %}
 
 <style>
-    .home-container{
+    .home-container {
         display: grid;
         grid-template-columns: 1fr 3fr 1fr
     }
@@ -22,9 +22,9 @@
         </div>
 
         {% for cuisine in cuisines %}
-            <div>
-                <a href="{% url 'home' %}?q={{cuisine.type}}">{{cuisine.type}}</a>
-            </div>
+        <div>
+            <a href="{% url 'home' %}?q={{cuisine.type}}">{{cuisine.type}}</a>
+        </div>
         {% endfor %}
     </div>
 
@@ -47,8 +47,8 @@
                 <p>{{recipe.description}}</p>
             </div>
             {% if request.user == recipe.user %}
-                <a href="{% url 'update-recipe' recipe.id %}">Edit</a>
-                <a href="{% url 'delete-recipe' recipe.id %}">Delete</a>
+            <a href="{% url 'update-recipe' recipe.id %}">Edit</a>
+            <a href="{% url 'delete-recipe' recipe.id %}">Delete</a>
             {% endif %}
 
             <hr>
@@ -62,12 +62,15 @@
         <h3>Recent Activity</h3>
         <hr>
         {% for comment in recipe_comments %}
-            <div>
-                <small>{{comment.user}}  {{comment.created|timesince}} ago</small>
-                <small>commented on "{{comment.recipe}}"</small>
+        <div>
+            <small>{{comment.user}} {{comment.created|timesince}} ago</small>
+            <small>commented on "{{comment.recipe}}"</small>
 
-                <p>{{comment}}</p>
-            </div>
+            <p>{{comment}}</p>
+            {% if request.user == comment.user %}
+            <a href="{% url 'delete-comment' comment.id %}">Delete</a>
+            {% endif %}
+        </div>
         {% endfor %}
     </div>
 
