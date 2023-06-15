@@ -6,7 +6,7 @@
         </span>
         <div>
             <h2><a href="/recipe/{{recipe.id}}">{{recipe.dish}}</a></h2>
-            <h4>by {{recipe.user}}</h4>
+            <a href="{% url 'user-profile' recipe.user.id %}">by {{recipe.user}}</a>
         </div>
         <p>{{recipe.description}}</p>
     </div>

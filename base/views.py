@@ -96,6 +96,12 @@ def recipe(request, pk):
     return render(request, 'base/recipe.html', context)
 
 
+def userProfile(request, pk):
+    user = User.objects.get(id=pk)
+    context = {'user': user}
+    return render(request, 'base/profile.html', context)
+
+
 @login_required(login_url='login')
 def createRecipe(request):
     form = RecipeForm()
