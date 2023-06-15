@@ -98,7 +98,10 @@ def recipe(request, pk):
 
 def userProfile(request, pk):
     user = User.objects.get(id=pk)
-    context = {'user': user}
+    recipes = user.recipe_set.all()
+    recipe_comments = user.comment_set.all().order_by('-created')
+    cuisines = Cuisine.objects.all()
+    context = {'user': user, 'recipes': recipes, 'recipe_comments': recipe_comments, 'cuisines': cuisines}
     return render(request, 'base/profile.html', context)
 
 
