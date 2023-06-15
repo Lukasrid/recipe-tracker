@@ -74,8 +74,9 @@ def home(request):
 
     cuisines = Cuisine.objects.all()
     recipes_count = recipes.count()
+    recipe_comments = Comment.objects.all()
 
-    context = {'recipes': recipes, 'cuisines': cuisines, 'recipes_count': recipes_count}
+    context = {'recipes': recipes, 'cuisines': cuisines, 'recipes_count': recipes_count, 'recipe_comments': recipe_comments}
     return render(request, 'base/home.html', context)
 
 
