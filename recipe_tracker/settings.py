@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-#o1nw(m8@4c5$7j2)1o@a+$(=m&!-98grjc#k&twlba_*k(u&j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-cesh2c8es07.ws-eu99.gitpod.io']
+ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-cesh2c8es07.ws-eu100.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-lukasrid-recipetracker-cesh2c8es07.ws-eu99.gitpod.io','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://8000-lukasrid-recipetracker-cesh2c8es07.ws-eu100.gitpod.io','https://*.127.0.0.1']
 
 
 # Application definition
@@ -141,4 +141,5 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': 'vD4pNVcvB_LDufWGs8PNy420GPc'
 }
 
+MEDIA_URL = '/food/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

@@ -10,6 +10,10 @@ class Cuisine(models.Model):
         return self.type
 
 
+class Images(models.Model):
+    image = models.ImageField(upload_to='food')
+
+
 class Recipe(models.Model):
     user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
     dish = models.CharField(max_length=200)
@@ -17,6 +21,7 @@ class Recipe(models.Model):
     description = models.TextField(null=True, blank=True)
     ingredients = models.TextField()
     method = models.TextField()
+    image = models.ImageField(Images, blank=True, null=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 

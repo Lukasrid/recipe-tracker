@@ -7,8 +7,11 @@
         <div>
             <h2><a href="/recipe/{{recipe.id}}">{{recipe.dish}}</a></h2>
             <p>by <a href="{% url 'user-profile' recipe.user.id %}">{{recipe.user}}</a></p>
+            <!-- <img src="{{image.Images.url}}" width="300px"> -->
+            
         </div>
         <p>{{recipe.description}}</p>
+        <img src="https://res.cloudinary.com/dr0vdz8oc/image/upload/v1686918231/{{recipe.image}}" height="300px" alt="">
     </div>
     {% if request.user == recipe.user %}
     <a href="{% url 'update-recipe' recipe.id %}">Edit</a>

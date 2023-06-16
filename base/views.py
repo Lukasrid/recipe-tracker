@@ -6,7 +6,7 @@ from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
-from .models import Recipe, Cuisine, Comment
+from .models import Recipe, Cuisine, Comment, Images
 from .forms import RecipeForm
 
 # recipes = [
@@ -75,14 +75,16 @@ def home(request):
     cuisines = Cuisine.objects.all()
     recipes_count = recipes.count()
     recipe_comments = Comment.objects.filter(Q(recipe__cuisine__type__icontains=q))
+    photo = Images.objects.all()
 
-    context = {'recipes': recipes, 'cuisines': cuisines, 'recipes_count': recipes_count, 'recipe_comments': recipe_comments}
+    context = {'recipes': recipes, 'cuisines': cuisines, 'recipes_count': recipes_count, 'recipe_comments': recipe_comments, 'photo': photo}
     return render(request, 'base/home.html', context)
 
 
 def recipe(request, pk):
     recipe = Recipe.objects.get(id=pk)
     recipe_comments = recipe.comment_set.all().order_by('-created')
+    
 
     if request.method == 'POST':
         comment = Comment.objects.create(
