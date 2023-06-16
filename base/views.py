@@ -113,7 +113,9 @@ def createRecipe(request):
     if request.method == 'POST':
         form = RecipeForm(request.POST)
         if form.is_valid():
-            form.save()
+            recipe = form.save(commit=False)
+            recipe.user = request.user
+            recipe.save()
             return redirect('home')
 
     context = {'form': form}
