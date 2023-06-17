@@ -111,7 +111,7 @@ def userProfile(request, pk):
 def createRecipe(request):
     form = RecipeForm()
     if request.method == 'POST':
-        form = RecipeForm(request.POST)
+        form = RecipeForm(request.POST, request.FILES)
         if form.is_valid():
             recipe = form.save(commit=False)
             recipe.user = request.user
@@ -131,7 +131,7 @@ def updateRecipe(request, pk):
         return HttpResponse('This is not your recipe to edit!!')
 
     if request.method == 'POST':
-        form = RecipeForm(request.POST, instance=recipe)
+        form = RecipeForm(request.POST, request.FILES, instance=recipe)
         if form.is_valid():
             form.save()
             return redirect('home')
