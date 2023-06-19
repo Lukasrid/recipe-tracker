@@ -1,3 +1,47 @@
-body{
-    background-color: aliceblue;
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans:ital,wght@1,700&display=swap');
+
+body {
+    background-color: #e0e0e0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr
+}
+
+#logo-pic {}
+
+.logo,
+.slogan {
+    color: #800000;
+    
+    display: inline;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.logo {
+    font-size: 3vw;
+    font-family: Lato, "Courgette", Tahoma, Sans-Serif;
+}
+
+.slogan {
+    font-size: 1vw;
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+}
+
+.login,
+.login-btn {
+    text-align: right;
+}
+
+.login {
+    margin-bottom: 10px;
 }
