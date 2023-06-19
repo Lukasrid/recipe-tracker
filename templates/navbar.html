@@ -2,8 +2,10 @@
     <div>
         <a href="/">
             <img src="../static/images/logo.png" alt="Flavoured Adventures logo" id="logo-pic">
-
         </a>
+        <form method="GET" action="{% url 'home' %}">
+            <input type="text" name="q" placeholder="Search Recipies..." id="search">
+        </form>
     </div>
 
     <div>
@@ -24,7 +26,3 @@
 </div>
 
 <hr>
-
-<form method="GET" action="{% url 'home' %}">
-    <input type="text" name="q" placeholder="Search Recipies..." id="search">
-</form>
