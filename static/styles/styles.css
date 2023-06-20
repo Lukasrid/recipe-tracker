@@ -37,11 +37,15 @@ a {
     font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
 }
 
-.login,
-.login-btn {
+.login-container {
     text-align: right;
 }
 
 .login {
     margin-bottom: 10px;
+}
+
+.login-btn {
+    margin-top: 10px;
+}
 }

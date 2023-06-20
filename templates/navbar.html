@@ -1,7 +1,11 @@
 <div class="nav-container">
     <div>
         <a href="/">
+            {% if page == 'home' %}
             <img src="../static/images/logo.png" alt="Flavoured Adventures logo" id="logo-pic">
+            {% else %}
+            <img src="../../static/images/logo.png" alt="Flavoured Adventures logo" id="logo-pic">
+            {% endif %}
         </a>
         <form method="GET" action="{% url 'home' %}">
             <input type="text" name="q" placeholder="Search Recipies..." id="search">
@@ -13,13 +17,13 @@
         <p class="slogan">A journey for your buds</p>
     </div>
 
-    <div>
+    <div class="login-container">
         {% if request.user.is_authenticated %}
-        <h4 class="login">You are logged in as {{request.user}}</h4>
         <a href="{% url 'logout' %}" class="login-btn">Logout</a>
+        <h4 class="login">You are logged in as {{request.user}}</h4>
         {% else %}
-        <h4 class="login">You are currently not logged in</h4>
         <a href="{% url 'login' %}" class="login-btn">Login</a>
+        <h4 class="login">You are currently not logged in</h4>
         {% endif %}
     </div>
 
