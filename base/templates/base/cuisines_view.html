@@ -1,12 +1,10 @@
-<h3>Browse Cuisines</h3>
-        <hr>
-
+<h3 class="title">Browse Cuisines</h3>
         <div>
-            <a href="{% url 'home' %}">All</a>
+            <a href="{% url 'home' %}" class="cuisine-list">All</a>
         </div>
 
         {% for cuisine in cuisines %}
-        <div>
+        <div class="cuisine-list">
             <a href="{% url 'home' %}?q={{cuisine.type}}">{{cuisine.type}}</a>
         </div>
         {% endfor %}

@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans:wght@500&display=swap');
 
 body {
     background-color: #e0e0e0;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
 }
 
 a {
@@ -27,6 +29,14 @@ a {
     
 }
 
+
+
+.search {
+    outline: 2px solid #800000;
+    display: inline;
+    border-radius: 3px;
+}
+
 .logo {
     font-size: 3vw;
     font-family: Lato, "Courgette", Tahoma, Sans-Serif;
@@ -35,17 +45,26 @@ a {
 .slogan {
     font-size: 1vw;
     font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    font-weight: bold; 
+    font-style: italic;
 }
 
 .login-container {
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
     text-align: right;
-}
-
-.login {
-    margin-bottom: 10px;
+    margin-top: 2vw;
+    margin-right: 1.5vw;
 }
 
 .login-btn {
-    margin-top: 10px;
+    outline: 2px solid #800000;
+    padding: 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    
+    background-color: #800000;
 }
+
+.login-btn-txt {
+    color: white;
 }
