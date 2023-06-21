@@ -10,6 +10,11 @@ a {
     text-decoration: none;
 }
 
+.home-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr
+}
+
 .nav-container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr
@@ -67,4 +72,80 @@ a {
 
 .login-btn-txt {
     color: white;
+}
+
+.side-title-left, .side-title-right {
+    font-size: 2em;
+    font-family: Lato, "Courgette", Tahoma, Sans-Serif;
+    text-decoration: underline;
+}
+
+.side-title-right {
+    text-align: center;
+}
+
+.cuisine-list {
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    font-size: 1.2em;
+    margin-left: 2vw;
+    margin-bottom: 5px;
+}
+
+.cuisine-list > a {
+    color: black;
+}
+
+.activity {
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+.activity > a {
+    font-size: small;
+    color: #800000;
+}
+
+.activity > small > a {
+    color: #800000;
+    font-size: 1.2em;
+}
+
+.home-container > div > h5 {
+    font-size: 1.2em;
+    font-family: Lato, "Courgette", Tahoma, Sans-Serif;
+}
+
+.home-container > div > a {
+    color: #800000;
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    font-size: 1,2em;
+}
+
+.middle > span > p {
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    font-style: italic;
+}
+
+.middle > div > h2 > a {
+    font-family: Lato, "Courgette", Tahoma, Sans-Serif;
+    color: #800000;
+    font-size: 1.2em;
+}
+
+.middle > div > p, .middle > div > a  {
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    color: black;
+    font-size: 1em;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.middle > p {
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    color: black;
+}
+
+.middle > img {
+    border-radius: 20px;
 }

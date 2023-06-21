@@ -1,13 +1,13 @@
-<h3>Recent Activity</h3>
-        <hr>
+<h3 class="side-title-right">Recent Activity</h3>
         {% for comment in recipe_comments %}
-        <div>
-            <small><a href="{% url 'user-profile' comment.user.id %}">{{comment.user}}</a> {{comment.created|timesince}} ago</small>
+        <div class="activity">
+            <small><a href="{% url 'user-profile' comment.user.id %}">{{comment.user}}</a> - {{comment.created|timesince}} ago</small>
             <small>commented on "{{comment.recipe}}"</small>
 
-            <p>{{comment}}</p>
+            <p>"{{comment}}"</p>
             {% if request.user == comment.user %}
             <a href="{% url 'delete-comment' comment.id %}">Delete</a>
             {% endif %}
         </div>
+        <hr>
         {% endfor %}

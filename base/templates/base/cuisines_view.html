@@ -1,6 +1,6 @@
-<h3 class="title">Browse Cuisines</h3>
-        <div>
-            <a href="{% url 'home' %}" class="cuisine-list">All</a>
+<h3 class="side-title-left">Browse Cuisines</h3>
+        <div class="cuisine-list">
+            <a href="{% url 'home' %}">All</a>
         </div>
 
         {% for cuisine in cuisines %}
@@ -8,3 +8,4 @@
             <a href="{% url 'home' %}?q={{cuisine.type}}">{{cuisine.type}}</a>
         </div>
         {% endfor %}
+        

@@ -25,7 +25,7 @@
 
     <div>
         <h1 class="logo">Flavoured Adventures</h1>
-        <p class="slogan" style="font-weight: bold; font-style: italic;">A journey for your buds</p>
+        <p class="slogan">A journey for your buds</p>
     </div>
 
     <div class="login-container">
@@ -40,6 +40,7 @@
         </span>
         <h4 class="login">You are currently not logged in</h4>
         {% endif %}
+        <a href="{% url 'create-recipe' %}" style="color: black; text-decoration: underline;">Create Recipe</a>
     </div>
 
 </div>

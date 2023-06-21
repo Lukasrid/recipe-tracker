@@ -1,6 +1,6 @@
-<div>
+<div class="recipe-container">
     {% for recipe in recipes %}
-    <div>
+    <div class="middle">
         <span>
             <p>{{recipe.cuisine}}</p>
         </span>
@@ -15,6 +15,7 @@
     </div>
     {% if request.user == recipe.user %}
     <a href="{% url 'update-recipe' recipe.id %}">Edit</a>
+    p
     <a href="{% url 'delete-recipe' recipe.id %}">Delete</a>
     {% endif %}
 
