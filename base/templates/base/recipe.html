@@ -2,14 +2,7 @@
 
 {% block content %}
 
-<style>
-    .recipe-container {
-        display: grid;
-        grid-template-columns: 1fr 6fr 1fr 12fr 1fr
-    }
-</style>
-
-<div>
+<div class="recipe">
 
     <h1>{{recipe.dish}}</h1>
 
@@ -19,28 +12,28 @@
 
 <div class="recipe-container">
     <div></div>
-    <div>
+    <div class="recipe2 ingredients">
         <h2>Ingredients:</h2>
         <br>
         {{recipe.ingredients}}
     </div>
     <div></div>
-    <div>
+    <div class="recipe2">
         <h2>Method:</h2>
         <br>
         {{recipe.method}}
     </div>
-    <div></div>
 </div>
 
+<hr>
 
 <div class="comment-wrapper">
     <h3>Comments</h3>
     <hr>
 
     {% for comment in recipe_comments %}
-    <div>
-        <p>{{comment.body}}</p>
+    <div class="recipe-comments">
+        <p>"{{comment.body}}"</p>
         <small>- {{comment.user}} {{comment.created|timesince}} ago</small>
         <br>
         {% if request.user == comment.user %}

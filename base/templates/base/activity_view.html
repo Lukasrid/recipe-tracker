@@ -2,7 +2,7 @@
         {% for comment in recipe_comments %}
         <div class="activity">
             <small><a href="{% url 'user-profile' comment.user.id %}">{{comment.user}}</a> - {{comment.created|timesince}} ago</small>
-            <small>commented on "{{comment.recipe}}"</small>
+            <small>commented on <a href="/recipe/{{recipe.id}}">"{{comment.recipe}}"</a></small>
 
             <p>"{{comment}}"</p>
             {% if request.user == comment.user %}
