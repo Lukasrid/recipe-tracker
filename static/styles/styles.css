@@ -30,13 +30,13 @@ hr {
 .logo,
 .slogan {
     color: #800000;
-    
+
     display: inline;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 
@@ -55,7 +55,7 @@ hr {
 .slogan {
     font-size: 1vw;
     font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
-    font-weight: bold; 
+    font-weight: bold;
     font-style: italic;
 }
 
@@ -71,7 +71,7 @@ hr {
     padding: 5px;
     border-radius: 3px;
     text-transform: uppercase;
-    
+
     background-color: #800000;
 }
 
@@ -79,7 +79,8 @@ hr {
     color: white;
 }
 
-.side-title-left, .side-title-right {
+.side-title-left,
+.side-title-right {
     font-size: 2em;
     font-family: Lato, "Courgette", Tahoma, Sans-Serif;
     text-decoration: underline;
@@ -96,7 +97,7 @@ hr {
     margin-bottom: 5px;
 }
 
-.cuisine-list > a {
+.cuisine-list>a {
     color: black;
 }
 
@@ -106,12 +107,12 @@ hr {
     margin-left: 10px;
 }
 
-.activity > a {
+.activity>a {
     font-size: small;
     color: #800000;
 }
 
-.activity > small > a {
+.activity>small>a {
     color: #800000;
     font-size: 1.2em;
 }
@@ -120,33 +121,34 @@ hr {
     padding-right: 40px;
 }
 
-.home-container > div > h5{
+.home-container>div>h5 {
     font-size: 1.2em;
     font-family: Lato, "Courgette", Tahoma, Sans-Serif;
 }
 
-.home-container > div > a {
+.home-container>div>a {
     color: #800000;
     font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
-    font-size: 1,2em;
+    font-size: 1, 2em;
 }
 
-.recipe-feed{
+.recipe-feed {
     padding-right: 50px;
 }
 
-.middle > span > p {
+.middle>span>p {
     font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
     font-style: italic;
 }
 
-.middle > div > h2 > a {
+.middle>div>h2>a {
     font-family: Lato, "Courgette", Tahoma, Sans-Serif;
     color: #800000;
     font-size: 1.2em;
 }
 
-.middle > div > p, .middle > div > a  {
+.middle>div>p,
+.middle>div>a {
     font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
     color: black;
     font-size: 1em;
@@ -154,12 +156,14 @@ hr {
     font-size: 0.9em;
 }
 
-.middle > p, .middle > div > p > a, .recipe > p  {
+.middle>p,
+.middle>div>p>a,
+.recipe>p {
     font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
     color: black;
 }
 
-.middle > img {
+.middle>img {
     border-radius: 20px;
 }
 
@@ -173,13 +177,13 @@ hr {
     padding-bottom: 20px;
 }
 
-.recipe > h1 {
+.recipe>h1 {
     font-family: Lato, "Courgette", Tahoma, Sans-Serif;
     color: #800000;
     font-size: 2em;
 }
 
-.recipe{
+.recipe {
     padding-left: 5em;
 }
 
@@ -188,7 +192,7 @@ hr {
     color: black;
 }
 
-.comment-wrapper > h3 {
+.comment-wrapper>h3 {
     font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
     color: black;
     font-size: 2em;
@@ -198,10 +202,11 @@ hr {
     padding: 20px;
     border: solid #800000;
     border-radius: 30px;
+    padding-top: 0px;
 }
 
-.recipe > p {
-    padding-right: 60vw;
+.recipe>p {
+    padding-right: 63vw;
 }
 
 .recipe-comments {
@@ -209,7 +214,26 @@ hr {
     font-size: 1em;
 }
 
-.recipe-comments > a {
+.recipe-comments>a {
     color: #800000;
     font-size: 0.8em;
+}
+
+.comment-box {
+    background-color: white;
+    border: solid 2px #800000;
+    border-radius: 8px;
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+}
+
+.submit {
+    background-color: #800000;
+    color: white;
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    border-radius: 35px;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    
+  ;
 }

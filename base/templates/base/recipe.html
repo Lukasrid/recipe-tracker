@@ -14,7 +14,7 @@
     <div></div>
     <div class="recipe2 ingredients">
         <h2>Ingredients:</h2>
-        <br>
+        
         {{recipe.ingredients}}
     </div>
     <div></div>
@@ -48,8 +48,9 @@
     <div class="comment-form">
         <form method="POST" action="">
             {% csrf_token %}
-            <textarea rows="5" cols="50" name="body" placeholder="Write your comment here..."></textarea>
-            <input type="submit" placeholder="Post Comment">
+            <textarea class="comment-box" rows="5" cols="50" name="body" placeholder="Write your comment here..."></textarea>
+            <br>
+            <input class="submit" type="submit" placeholder="Post Comment" >
         </form>
     </div>
     {% endif %}
