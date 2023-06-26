@@ -3,10 +3,23 @@
 {% block content %}
 
 <div class="recipe">
+    
 
     <h1>{{recipe.dish}}</h1>
 
-    <p>{{recipe.description}}</p>
+         <a href="{% url 'user-profile' recipe.user.id %}">by {{recipe.user}}</a>
+        <br>
+        {% if request.user == recipe.user %}
+
+
+        <a href="{% url 'update-recipe' recipe.id %}">Edit</a>
+        /
+        <a href="{% url 'delete-recipe' recipe.id %}">Delete</a>
+
+        {% endif %}
+    
+
+    <p>{{recipe.description|linebreaks}}</p>
 
 </div>
 
@@ -14,14 +27,14 @@
     <div></div>
     <div class="recipe2 ingredients">
         <h2>Ingredients:</h2>
-        
-        {{recipe.ingredients}}
+
+        {{recipe.ingredients|linebreaks}}
     </div>
     <div></div>
     <div class="recipe2">
         <h2>Method:</h2>
         <br>
-        {{recipe.method}}
+        {{recipe.method|linebreaks}}
     </div>
 </div>
 
@@ -48,9 +61,10 @@
     <div class="comment-form">
         <form method="POST" action="">
             {% csrf_token %}
-            <textarea class="comment-box" rows="5" cols="50" name="body" placeholder="Write your comment here..."></textarea>
+            <textarea class="comment-box" rows="5" cols="50" name="body"
+                placeholder="Write your comment here..."></textarea>
             <br>
-            <input class="submit" type="submit" placeholder="Post Comment" >
+            <input class="submit" type="submit" placeholder="Post Comment">
         </form>
     </div>
     {% endif %}

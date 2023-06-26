@@ -183,6 +183,12 @@ hr {
     font-size: 2em;
 }
 
+.recipe>a {
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    color: black;
+    font-style: italic;
+}
+
 .recipe {
     padding-left: 5em;
 }
