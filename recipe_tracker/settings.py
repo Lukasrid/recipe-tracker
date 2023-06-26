@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
+if os.path.isfile('env.py'):
+    import env
 import cloudinary_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -21,14 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#o1nw(m8@4c5$7j2)1o@a+$(=m&!-98grjc#k&twlba_*k(u&j'
-
+SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-m1lgodtwwt6.ws-eu100.gitpod.io']
+ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu100.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-lukasrid-recipetracker-m1lgodtwwt6.ws-eu100.gitpod.io','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu100.gitpod.io','https://*.127.0.0.1']
 
 
 # Application definition
@@ -40,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'recipe_tracker',
     'cloudinary',
     'cloudinary_storage',
 
@@ -82,12 +86,16 @@ WSGI_APPLICATION = 'recipe_tracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+ }
 
 
 # Password validation
