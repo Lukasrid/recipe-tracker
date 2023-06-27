@@ -6,7 +6,7 @@
             <img src="{% static '../static/images/logo.png'%}" alt="Flavoured Adventures logo" id="logo-pic">
             {% else %}
             {% load static %}
-            <img src="{% static '../../static/images/logo.png'%}" alt="Flavoured Adventures logo" id="logo-pic">
+            <img src="{% static '../static/images/logo.png'%}" alt="Flavoured Adventures logo" id="logo-pic">
             {% endif %}
         </a>
         <form method="GET" action="{% url 'home' %}">
