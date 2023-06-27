@@ -3,9 +3,10 @@
 {% block content %}
 
 <div class="recipe">
+<div><h1>{{recipe.dish}}</h1></div>
+<div> <img src="https://res.cloudinary.com/dr0vdz8oc/image/upload/v1686918231/{{recipe.image}}" height="300px" alt=""> </div>
     
-
-    <h1>{{recipe.dish}}</h1>
+    
 
          <a href="{% url 'user-profile' recipe.user.id %}">by {{recipe.user}}</a>
         <br>

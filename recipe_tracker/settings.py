@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu100.gitpod.io']
+ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu100.gitpod.io', 'flavoured-adventures.herokuapp.com' 'localhost']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu100.gitpod.io','https://*.127.0.0.1']
 
