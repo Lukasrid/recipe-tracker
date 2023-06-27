@@ -19,6 +19,15 @@ hr {
     grid-template-columns: 1fr 3fr 1fr
 }
 
+.username-top {
+    font-size: 2vw;
+    font-family: Lato, "Courgette", Tahoma, Sans-Serif;
+    text-decoration: underline;
+    color: #800000;
+    text-align: center;
+    margin-right: 3vw;
+}
+
 
 /* NAVBAR.HTML DECORATIONS */
 
@@ -293,7 +302,6 @@ hr {
     color: #800000;
     font-size: 2em;
     text-align: center;
-    position: absolute;
 }
 
 .login-page-container {
@@ -306,7 +314,6 @@ hr {
     margin-top: 10px;
     padding: 10px 50px;
     text-align: center;
-    position: relative;
 }
 
 .login-label {
@@ -348,4 +355,9 @@ hr {
 .recipe-form {
     font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
     font-size: 1em;
+}
+
+/*For medium screen sizes from 550px and down */
+@media screen and (max-width: 550px) {
+    
 }

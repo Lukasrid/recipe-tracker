@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORGIN'
 
@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu101.gitpod.io', '
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu101.gitpod.io','https://*.127.0.0.1']
 
+SITE_ID = 1
 
 # Application definition
 
