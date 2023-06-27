@@ -2,7 +2,7 @@
     {% for recipe in recipes %}
     <div class="middle">
         <span>
-            <p>{{recipe.cuisine}}</p>
+            <p><a style="color: black;" href="{% url 'home' %}?q={{recipe.cuisine}}">{{recipe.cuisine}}</a></p>
 
         </span>
         <div>

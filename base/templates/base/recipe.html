@@ -3,24 +3,44 @@
 {% block content %}
 
 <div class="recipe">
-<div><h1>{{recipe.dish}}</h1></div>
-<div> <img src="https://res.cloudinary.com/dr0vdz8oc/image/upload/v1686918231/{{recipe.image}}" height="300px" alt=""> </div>
-    
-    
-
-         <a href="{% url 'user-profile' recipe.user.id %}">by {{recipe.user}}</a>
+    <div>
         <br>
-        {% if request.user == recipe.user %}
+        <a href="{% url 'home' %}?q={{recipe.cuisine}}">{{recipe.cuisine}}</a>
+        <br>
+        <h1>{{recipe.dish}}</h1>
 
+        <a href="{% url 'user-profile' recipe.user.id %}">by {{recipe.user}}</a>
+
+        <br>
+
+        {% if request.user == recipe.user %}
 
         <a href="{% url 'update-recipe' recipe.id %}">Edit</a>
         /
         <a href="{% url 'delete-recipe' recipe.id %}">Delete</a>
 
         {% endif %}
-    
+    </div>
 
-    <p>{{recipe.description|linebreaks}}</p>
+        <br>
+
+    <div class="recipe-name-container"> 
+        <div>
+            <p>{{recipe.description|linebreaks}}</p> 
+        </div>
+        <div>
+            <img src="https://res.cloudinary.com/dr0vdz8oc/image/upload/v1686918231/{{recipe.image}}" height="400px" alt=""> 
+        </div> 
+    </div>
+
+
+
+    
+    <br>
+
+
+
+    
 
 </div>
 
@@ -39,7 +59,7 @@
     </div>
 </div>
 
-<hr>
+
 
 <div class="comment-wrapper">
     <h3>Comments</h3>
@@ -57,6 +77,7 @@
     </div>
     {% endfor %}
 
+    <br>
 
     {% if request.user.is_authenticated %}
     <div class="comment-form">
