@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu100.gitpod.io', 'https://flavoured-adventures-f1491c2fd119.herokuapp.com/' 'localhost']
+ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu100.gitpod.io', 'flavoured-adventures.herokuapp.com' 'localhost']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu100.gitpod.io','https://*.127.0.0.1']
 
