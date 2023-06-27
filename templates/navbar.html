@@ -2,9 +2,11 @@
     <div>
         <a href="/">
             {% if page == 'home' %}
-            <img src="../static/images/logo.png" alt="Flavoured Adventures logo" id="logo-pic">
+            {% load static %}
+            <img src="{% static '../static/images/logo.png'%}" alt="Flavoured Adventures logo" id="logo-pic">
             {% else %}
-            <img src="../../static/images/logo.png" alt="Flavoured Adventures logo" id="logo-pic">
+            {% load static %}
+            <img src="{% static '../../static/images/logo.png'%}" alt="Flavoured Adventures logo" id="logo-pic">
             {% endif %}
         </a>
         <form method="GET" action="{% url 'home' %}">
