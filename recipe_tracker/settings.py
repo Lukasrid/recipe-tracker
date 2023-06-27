@@ -31,9 +31,9 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORGIN'
 
-ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu100.gitpod.io', 'flavoured-adventures.herokuapp.com' 'localhost', 'flavoured-adventures-f1491c2fd119.herokuapp.com']
+ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu101.gitpod.io', 'flavoured-adventures.herokuapp.com' 'localhost', 'flavoured-adventures-f1491c2fd119.herokuapp.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu100.gitpod.io','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu101.gitpod.io','https://*.127.0.0.1']
 
 
 # Application definition

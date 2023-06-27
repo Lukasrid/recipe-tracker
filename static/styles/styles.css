@@ -19,6 +19,10 @@ hr {
     grid-template-columns: 1fr 3fr 1fr
 }
 
+
+/* NAVBAR.HTML DECORATIONS */
+
+
 .nav-container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr
@@ -77,6 +81,10 @@ hr {
     color: white;
 }
 
+
+/* CUISINES_VIEW.HTML DECORATIONS */
+
+
 .side-title-left,
 .side-title-right {
     font-size: 2em;
@@ -99,6 +107,10 @@ hr {
     color: black;
 }
 
+
+/* ACTIVITY_VIEW.HTML DECORATIONS */
+
+
 .activity {
     font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
     font-size: 1em;
@@ -115,9 +127,17 @@ hr {
     font-size: 1.2em;
 }
 
+
+/* RECIPE.HTML DECORATIONS */
+
+
 .recipe-container {
     padding-right: 40px;
 }
+
+
+/* HOME.HTML DECORATIONS */
+
 
 .home-container>div>h5 {
     font-size: 1.2em;
@@ -129,6 +149,10 @@ hr {
     font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
     font-size: 1, 2em;
 }
+
+
+/* FEED_VIEW.HTML DECORATIONS */
+
 
 .recipe-feed {
     padding-right: 50px;
@@ -175,6 +199,10 @@ hr {
     grid-template-columns: 1fr 6fr 1fr 12fr 1fr;
     padding-bottom: 20px;
 }
+
+
+/* RECIPE.HTML DECORATIONS */
+
 
 .recipe-name-container {
     display: grid;
@@ -252,6 +280,70 @@ hr {
     height: 70px;
     width: 70px;
     text-align: center;
-    
-  ;
+
+    ;
+}
+
+
+/* LOGIN_REGISTER.HTML DECORATIONS */
+
+
+.login-header {
+    font-family: Lato, "Courgette", Tahoma, Sans-Serif;
+    color: #800000;
+    font-size: 2em;
+    text-align: center;
+}
+
+.login-page-container {
+    border: 5px solid #800000;
+    border-radius: 50px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 10px;
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.login-label {
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    font-size: 1em;
+}
+
+.login-input,
+.login-container>form>input {
+    margin: 0 auto;
+    text-align: center;
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    color: #800000;
+    border: 2px solid #800000;
+    border-radius: 7px;
+}
+
+.login-page-container>a,
+.login-container>a {
+    font-family: Lato, "Courgette", Tahoma, Sans-Serif;
+    color: #800000;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+.login-container {
+    text-align: left;
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    font-size: 1em;
+}
+
+.login-container>form>input {
+    font-size: 1.5em;
+}
+
+
+/* RECIPE_FORM.HTML DECORATIONS */
+
+.recipe-form {
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    font-size: 1em;
 }
