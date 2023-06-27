@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-lukasrid-recipetracker-jnr65w0lvgi.ws-eu100.gitpod.io', 'flavoured-adventures.herokuapp.com' 'localhost', 'flavoured-adventures-f1491c2fd119.herokuapp.com']
 
@@ -136,10 +136,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR / 'static')
+    BASE_DIR / 'static'
 ]
-
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -154,5 +152,3 @@ CLOUDINARY_STORAGE = {
 
 MEDIA_URL = '/food/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-STATIC_ROOT = BASE_DIR / "staticfiles"
