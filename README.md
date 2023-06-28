@@ -71,13 +71,32 @@ This project consited of 5 main Epics
 ## The Structure Plane
 ---
 ### Features
-#### Navigation Bar
+#### Navigation Bar (All Pages)
     The navigation bar is located at the top of every page on the websit. It is used to help navigate the websitefrom any page. 
 ![Navigation Bar](/static/images/Navbar.JPG)
 - Logo/Header -> Visual representations of the website and also works as a links back to homepage.
 - Login/Logout -> A button located in the top right hand corner that allows user to navigate to the login page or log out of their current account. Text underneath the button tells user if they are not logged in or who they are logged in as.
 - Create Recipe -> The Create Recipe text is a link to the page where users can create their own recipes. 
 - Search Bar -> The search bar located under the logo is where users can search for recipie names, cuisines, ingredients or descriptions. This search bar is activated when the eneter button is pressed on the keyboard.
+
+#### Browse Cuisines (Homepage)
+    On the homepage a Browse Cuisine list can be found which enables user to click on any of the available cuisines and be redirected to a page where only events and recipes related to that cuisine can be found.
+![Browse Cuisines](/static/images/Browse%20Cuisines.JPG)
+
+#### Main Feed (Homepage)
+    In the middle of the homepage a feed of the most recent recipes will come up in order of the creation or edited timestamp.
+![Main Feed](/static/images/Main%20feed.JPG)
+- A recipe counter in the top right shows how many recipes are avilable.
+- Each recipe shown gives a cuisine, dish name, author name, description and an optional image.
+- If the user viewing the recipe is also the author an Edit/Delete option will show up on the recipe.
+- The cuisine, dish name, edit/delete and author name are all links that can be clicked and will direct the user to the appropriate page.
+
+#### Recent Activity Feed (Homepage)
+    The Recent Activity feed can be found on the right hand side of the homepage that shows the most recent comments made on recipes.
+![Recent Activity Feed](/static/images/Activity%20feed.JPG)
+- Only shows comments (for now).
+- A user can see who, when and on what was commented on as well as the actual comment.
+- A user viewing their own comment will be presented with a Delete option that removes the users comment.
 ### Future Features
 
 ## The Skeleton Plane
