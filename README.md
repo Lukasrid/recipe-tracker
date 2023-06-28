@@ -71,32 +71,103 @@ This project consited of 5 main Epics
 ## The Structure Plane
 ---
 ### Features
-#### Navigation Bar (All Pages)
+#### **All Pages**
+- *Navigation Bar*
+
     The navigation bar is located at the top of every page on the websit. It is used to help navigate the websitefrom any page. 
-![Navigation Bar](/static/images/Navbar.JPG)
-- Logo/Header -> Visual representations of the website and also works as a links back to homepage.
-- Login/Logout -> A button located in the top right hand corner that allows user to navigate to the login page or log out of their current account. Text underneath the button tells user if they are not logged in or who they are logged in as.
-- Create Recipe -> The Create Recipe text is a link to the page where users can create their own recipes. 
-- Search Bar -> The search bar located under the logo is where users can search for recipie names, cuisines, ingredients or descriptions. This search bar is activated when the eneter button is pressed on the keyboard.
 
-#### Browse Cuisines (Homepage)
+    ![Navigation Bar](/static/images/Navbar.JPG)
+
+    - Logo/Header -> Visual representations of the website and also works as a links back to homepage.
+    - Login/Logout -> A button located in the top right hand corner that allows user to navigate to the login page or log out of their current account. Text underneath the button tells user if they are not logged in or who they are logged in as.
+    - Create Recipe -> The Create Recipe text is a link to the page where users can create their own recipes. 
+    - Search Bar -> The search bar located under the logo is where users can search for recipie names, cuisines, ingredients or descriptions. This search bar is activated when the eneter button is pressed on the keyboard.
+
+#### **Homepage**
+- *Browse Cuisines*
+
     On the homepage a Browse Cuisine list can be found which enables user to click on any of the available cuisines and be redirected to a page where only events and recipes related to that cuisine can be found.
-![Browse Cuisines](/static/images/Browse%20Cuisines.JPG)
 
-#### Main Feed (Homepage)
+    ![Browse Cuisines](/static/images/Browse%20Cuisines.JPG)
+
+- *Main Feed*
+
     In the middle of the homepage a feed of the most recent recipes will come up in order of the creation or edited timestamp.
-![Main Feed](/static/images/Main%20feed.JPG)
-- A recipe counter in the top right shows how many recipes are avilable.
-- Each recipe shown gives a cuisine, dish name, author name, description and an optional image.
-- If the user viewing the recipe is also the author an Edit/Delete option will show up on the recipe.
-- The cuisine, dish name, edit/delete and author name are all links that can be clicked and will direct the user to the appropriate page.
 
-#### Recent Activity Feed (Homepage)
+    ![Main Feed](/static/images/Main%20feed.JPG)
+
+    - A recipe counter in the top right shows how many recipes are avilable.
+    - Each recipe shown gives a cuisine, dish name, author name, description and an optional image.
+    - If the user viewing the recipe is also the author an Edit/Delete option will show up on the recipe.
+    - The cuisine, dish name, edit/delete and author name are all links that can be clicked and will direct the user to the appropriate page.
+
+- *Recent Activity Feed*
+
     The Recent Activity feed can be found on the right hand side of the homepage that shows the most recent comments made on recipes.
-![Recent Activity Feed](/static/images/Activity%20feed.JPG)
-- Only shows comments (for now).
-- A user can see who, when and on what was commented on as well as the actual comment.
-- A user viewing their own comment will be presented with a Delete option that removes the users comment.
+
+    ![Recent Activity Feed](/static/images/Activity%20feed.JPG)
+
+    - Only shows comments (for now).
+    - A user can see who, when and on what was commented on as well as the actual comment.
+    - A user viewing their own comment will be presented with a Delete option that removes the users comment.
+
+#### **Cuisine Page**
+
+    Same as Homepage but the 'main feed' and 'recent activity feed' only show activity related to that cuisine.
+
+#### **Profile Page**
+
+    Same as Homepage but the 'main feed' and 'recent activity feed' only show activity related to the user. Their name is also printed out at the top of the 'main feed'
+
+![Profile Page](/static/images/Profile.JPG)
+
+
+
+#### **Create Recipe Page**
+
+![Create Recipe](/static/images/Create%20Recipe.JPG)
+
+- *Dish*
+
+    The user can enter a name for the recipe.
+
+- *Cuisine*
+
+    The user can select a cuisine the dish belongs to from a dropdown menu. The user is unable to create their own unique cuisines.
+
+- *Description*
+
+    The user can write a breif description of the recipe.
+
+- *Ingredients*
+
+    The user can write down a list of ingredients for the recipe.
+
+- *Method*
+
+    The user can write down instructions on how to prepare the recipe.
+
+- *Image*
+
+    The user can choose to include an image of the completed dish. (Optional)
+
+- *Submit*
+
+    The user then can click submit to send off the information to be stored in a PostgreSQL database to then be presented on the website. 
+
+#### **Login Page**
+
+    The user can enter their email and password in the fields provided and then click sign in. If they however do not have an account they can press the 'Sign up!' button to be redirected to the Register Page.
+
+![Login](/static/images/Login%20Box.JPG)
+ 
+
+#### **Register Page**
+
+    The user can fill in the required fields and click the 'Register' button to register themselves as a member. They are also prompted with a 'Login' button at the bottom incase they already have an account.
+
+![Register Box](/static/images/Register%20Box.JPG)
+
 ### Future Features
 
 ## The Skeleton Plane
