@@ -29,6 +29,8 @@ The final sprint, "Deployment and Final Touches," involves the deployment of the
 #### Epics & User Stories
 This project consited of 5 main Epics
 
+Link to [user stories](https://github.com/users/Lukasrid/projects/3/views/1)
+
 1. Project Setup
     - As a developer I need to develop a basic structure and layout so that i can easily navigate and edit the website
     - As a developer I need to create templates for each of the different pages of the website so that I can implement different functionality
@@ -169,34 +171,136 @@ This project consited of 5 main Epics
 ![Register Box](/static/images/Register%20Box.JPG)
 
 ### Future Features
+- The registration form and the create recipe form will be stylized better (ran out of time to figure out how to do this).
+- Users will be able to make a contact list of people they like.
+- Users will be able to save and favourite recipes.
+- Direct private messaging to other user will be implented.
+- Users will be able to request new cuisines at admin approval.
+- Users will be able to search for other usersand not only recipes.
+- Screen responsiveness will be improved.
+- Activity feed will include more than just comments.
+- Sweet and savoury catagories will be added for easier navigation.
+- Users will be able to add a profile picture and customize their profile page more.
+- A heading will be added at the top for when browing a specific cuisine.
+- The number of recipies available from a user will be displayed at the top of a profile page like it does for the homepage and cuisine catagories.
 
-## The Skeleton Plane
-### Wireframes
-### Database Design
-### Security
 
 ## The Surface Plane
 ### Design
 #### Color Scheme
+The main color schmemes used on the wbsite was a grey (#e0e0e0) for the background a kind of red (#800000) for highlighting important words and features. Rest of the text is black.
 #### Typography
+A font called "Cougette" was used as the main title and other key titles. The rest of the text id "Open Sans". The back up fonts are "Tahoma" and "Sans-Serif".
 #### Imagery
+The logo image was made using [freelogodesign.org](https://www.freelogodesign.org/).
 
+All other images were taken from [Pexels](https://www.pexels.com/).
 
 # Technologies
+
+- HTML
+  - The structure of the Website was developed using HTML as the main language.
+- CSS
+  - The Website was styled using custom CSS in an external file.
+- JavaScript
+  - JavaScript was used to insert icons.
+- Python
+  - Python was the main programming language used for the application using the Django Framework.
+- PostgreSQL
+    - The database where all data is stored that is put into the website.
+- Cloudinary
+    - Where all the images that get uploaded are stored
+- Visual Studio Code
+  - The website was developed using Visual Studio Code IDE
+- GitHub
+  - Source code is hosted on GitHub
+- Git
+  - Used to commit and push code during the development of the Website
+- Font Awesome
+  - This was used for icons throughout the site
+- Favicon.io
+  - favicon files were created at https://favicon.io/favicon-converter/
+
+### External Python Modules
+- asgiref==3.7.2
+- cloudinary==1.33.0
+- dj-database-url==0.5.0
+- dj3-cloudinary-storage==0.0.6
+- Django==3.2.3
+- gunicorn==20.1.0
+- Pillow==9.5.0
+- psycopg2==2.9.6
+- pytz==2023.3
+- sqlparse==0.4.4
+- urllib3==1.26.16
+- whitenoise==6.5.0
 
 
 # Testing
 
 
 # Development
+### Version Control
 
-## Version Control
+The site was created using the Visual Studio Code editor and pushed to github to the remote repository ‘Gars-Steakhouse’.
 
-## Heroku Deployment
+The following git commands were used throughout development to push code to the remote repo:
 
-## Run Locally
+```git add <file>``` - This command was used to add the file(s) to the staging area before they are committed.
 
-## Fork Project
+```git commit -m “commit message”``` - This command was used to commit changes to the local repository queue ready for the final step.
+
+```git push``` - This command was used to push all committed code to the remote repository on github.
+
+### Heroku Deployment
+
+The site was deployed to Heroku. The steps to deploy are as follows:
+
+- Navigate to heroku and create an account
+- Click the new button in the top right corner
+- Select create new app
+- Enter app name
+- Select region and click create app
+- Click the resources tab and search for Heroku Postgres
+- Select hobby dev and continue
+- Go to the settings tab and then click reveal config vars
+- Add the following config vars:
+  - SECRET_KEY: (Your secret key)
+  - DATABASE_URL: (This should already exist with add on of postgres)
+  - EMAIL_HOST_USER: (email address)
+  - EMAIL_HOST_PASS: (email app password)
+  - CLOUNDINARY_URL: (cloudinary api url)
+- Click the deploy tab
+- Scroll down to Connect to GitHub and sign in / authorize when prompted
+- In the search box, find the repositoy you want to deploy and click connect
+- Scroll down to Manual deploy and choose the main branch
+- Click deploy
+
+The app should now be deployed.
+
+The live link can be found here: [Live Site](https://sizzle-and-steak.onrender.com/)
+
+### Run Locally
+
+Navigate to the GitHub Repository you want to clone to use locally:
+
+- Click on the code drop down button
+- Click on HTTPS
+- Copy the repository link to the clipboard
+- Open your IDE of choice (git must be installed for the next steps)
+- Type git clone copied-git-url into the IDE terminal
+
+The project will now have been cloned on your local machine for use.
+
+### Fork Project
+
+Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.
+
+- Navigate to the GitHub Repository you want to fork.
+
+- On the top right of the page under the header, click the fork button.
+
+- This will create a duplicate of the full project in your GitHub Repository.
 
 
 # Credits
