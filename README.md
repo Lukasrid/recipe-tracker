@@ -74,6 +74,11 @@ Link to [user stories](https://github.com/users/Lukasrid/projects/3/views/1)
 ---
 ### Features
 #### **All Pages**
+- *Favicon*
+    
+    A favicon of the home logo was added so that the tab will always show what website you are on.
+
+    ![Favicon](/static/images/Favicon%20Snip.JPG)
 - *Navigation Bar*
 
     The navigation bar is located at the top of every page on the websit. It is used to help navigate the websitefrom any page. 
@@ -157,6 +162,11 @@ Link to [user stories](https://github.com/users/Lukasrid/projects/3/views/1)
 
     The user then can click submit to send off the information to be stored in a PostgreSQL database to then be presented on the website. 
 
+#### **Delete Page**
+    When a a user tries to delete a recipe that they have created, they are redirected to the delete page where they are asked if they are sure about their choice. They then have the option to cancel by pressing 'Go Back' or to delete it by pressing 'Confirm'.
+
+![Delete Page](/static/images/Delete%20page.JPG)
+
 #### **Login Page**
 
     The user can enter their email and password in the fields provided and then click sign in. If they however do not have an account they can press the 'Sign up!' button to be redirected to the Register Page.
@@ -172,9 +182,11 @@ Link to [user stories](https://github.com/users/Lukasrid/projects/3/views/1)
 
 ### Future Features
 - The registration form and the create recipe form will be stylized better (ran out of time to figure out how to do this).
+- A footer is to be added.
 - Users will be able to make a contact list of people they like.
 - Users will be able to save and favourite recipes.
 - Direct private messaging to other user will be implented.
+- Emails will be added so that admin can contact users.
 - Users will be able to request new cuisines at admin approval.
 - Users will be able to search for other usersand not only recipes.
 - Screen responsiveness will be improved.
@@ -183,6 +195,8 @@ Link to [user stories](https://github.com/users/Lukasrid/projects/3/views/1)
 - Users will be able to add a profile picture and customize their profile page more.
 - A heading will be added at the top for when browing a specific cuisine.
 - The number of recipies available from a user will be displayed at the top of a profile page like it does for the homepage and cuisine catagories.
+- Users will be able to delete their account
+- Users will be able to report or flag inappropriate content.
 
 
 ## The Surface Plane
@@ -237,12 +251,34 @@ All other images were taken from [Pexels](https://www.pexels.com/).
 
 
 # Testing
+## Functionality Testing
+The website has been thoroughly tested to see if it work, these include:
+
+- All processed information gets stored in the linked up PostgreSQL database.
+- All uploaded images get stored and viewd via Cloudinary.
+- All links are working and take you to the right destination.
+- All no information can be submitted without the right content and the required fields filled in.
+- Non-registered users do not have access to features.
+- Registered users do have access to features.
+- Activity shows up in the correct order of when created/edited on all pages.
+- Only relavant information shows up when viewing specific cuisines or profile pages.
+
+## Validator Testing
+### HTML Validator
+The website was run through [W# HTML Validator](https://validator.w3.org/)
+
+![HTML Validator](/static/images/HTML%20checker.JPG)
+
+### Lighthouse
+The lighthouse report showed decent results with areas of improvement in SEO and Best Practices.
+
+![Lighthouse results](/static/images/lighthouse%20results.JPG)
 
 
 # Development
 ### Version Control
 
-The site was created using the Visual Studio Code editor and pushed to github to the remote repository ‘Gars-Steakhouse’.
+The site was created using the Visual Studio Code editor and pushed to github to the remote repository ‘recipe-tracker’.
 
 The following git commands were used throughout development to push code to the remote repo:
 

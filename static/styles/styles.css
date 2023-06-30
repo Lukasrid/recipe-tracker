@@ -168,7 +168,7 @@ hr {
     text-align: center;
 }
 
-.middle>span>p {
+.middle>span>a {
     font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
     font-style: italic;
 }
@@ -292,6 +292,30 @@ hr {
 }
 
 
+/* DELETE.HTML DECORATIONS */
+
+
+.delete-container {
+    text-align: center;
+    margin-top: 60px;
+    font-family: Lato, "Open Sans", Tahoma, Sans-Serif;
+    
+}
+
+.delete-container>form>a {
+    color: black;
+    background-color: #f39f9fb7;
+    padding: 3px;
+}
+
+.delete-container>form>input {
+    font-size: 1em;
+    color: black;
+    background-color: #82c5055b;
+}
+
+
+
 /* LOGIN_REGISTER.HTML DECORATIONS */
 
 
@@ -319,6 +343,8 @@ hr {
     font-size: 1em;
 }
 
+.delete-container>form>a,
+.delete-container>form>input,
 .login-input,
 .login-container>form>input {
     margin: 0 auto;
