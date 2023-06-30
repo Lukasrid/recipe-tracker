@@ -2,6 +2,8 @@
 
 Flavoured Adventures is an online community where people can gather and share their recipes with each other from around the globe. The site allows user to browse existing recipes as well as the option to register and login in order to upload their own recipes or leave comments on other peoples recipes.
 
+The Site can be accessed via https://flavoured-adventures-f1491c2fd119.herokuapp.com/
+
 ![Responsiveness](/static/images/Responsiveness.JPG)
 
 # User Experience Design
@@ -314,7 +316,7 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 
 The app should now be deployed.
 
-The live link can be found here: [Live Site](https://sizzle-and-steak.onrender.com/)
+The live link can be found here: [Live Site](https://flavoured-adventures-f1491c2fd119.herokuapp.com/)
 
 ### Run Locally
 
